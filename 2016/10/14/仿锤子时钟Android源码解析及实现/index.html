@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="android,view," />
 
 
 
@@ -84,40 +84,30 @@
 
 
 
-<meta name="description" content="晴转多云/空气质量良
+<meta name="description" content="文/大大大大峰哥
 
-越是美丽，越是短暂。
-
-
-学校总是笼罩在雾蒙蒙的空气，像一个笼子一样笼罩着眼前的世界。当然也可能是自己不喜欢这种生活吧，总觉得这个世界有很多东西都在阻扰着人生的成长吧。
-晚上闷在寝室感觉很是无聊，也不知道自己多久才能适应一个人的生活了。
-晚上在学校的操场中悠闲的与很多同校的人同行，一起感受着夜深的宁静。操场中有许多人躺在操场的草坪与小伙伴分享着一些开心与不开心的事情，偶尔也">
+来源首先先说明这个代码出自于SmartisanTime，这里面有许多开源的代码，以后我学会了一个同时在我时间充裕的情况下，我都会在这里分析源码，将我的心得与如何实现同时我遇到的一些问题进行与大家进行交流分析。
+适合人群Android的初学者，熟悉基本的自定义View。
+会遇到的一些问题1.Paint为什么添加阴影失败？答：需要关闭硬件加速，函数上面添加 @SuppressLin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2016.10.10">
-<meta property="og:url" content="http://yoursite.com/2016/10/10/2016-10-10/index.html">
+<meta property="og:title" content="仿锤子时钟Android源码解析及实现">
+<meta property="og:url" content="http://yoursite.com/2016/10/14/仿锤子时钟Android源码解析及实现/index.html">
 <meta property="og:site_name" content="清风阁">
-<meta property="og:description" content="晴转多云/空气质量良
+<meta property="og:description" content="文/大大大大峰哥
 
-越是美丽，越是短暂。
-
-
-学校总是笼罩在雾蒙蒙的空气，像一个笼子一样笼罩着眼前的世界。当然也可能是自己不喜欢这种生活吧，总觉得这个世界有很多东西都在阻扰着人生的成长吧。
-晚上闷在寝室感觉很是无聊，也不知道自己多久才能适应一个人的生活了。
-晚上在学校的操场中悠闲的与很多同校的人同行，一起感受着夜深的宁静。操场中有许多人躺在操场的草坪与小伙伴分享着一些开心与不开心的事情，偶尔也">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/925416-47ccbd6695d6bbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/925416-cae17be9e92ef841.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2016-10-14T11:13:43.548Z">
+来源首先先说明这个代码出自于SmartisanTime，这里面有许多开源的代码，以后我学会了一个同时在我时间充裕的情况下，我都会在这里分析源码，将我的心得与如何实现同时我遇到的一些问题进行与大家进行交流分析。
+适合人群Android的初学者，熟悉基本的自定义View。
+会遇到的一些问题1.Paint为什么添加阴影失败？答：需要关闭硬件加速，函数上面添加 @SuppressLin">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/925416-05839a7036682df3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-10-14T11:26:40.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2016.10.10">
-<meta name="twitter:description" content="晴转多云/空气质量良
+<meta name="twitter:title" content="仿锤子时钟Android源码解析及实现">
+<meta name="twitter:description" content="文/大大大大峰哥
 
-越是美丽，越是短暂。
-
-
-学校总是笼罩在雾蒙蒙的空气，像一个笼子一样笼罩着眼前的世界。当然也可能是自己不喜欢这种生活吧，总觉得这个世界有很多东西都在阻扰着人生的成长吧。
-晚上闷在寝室感觉很是无聊，也不知道自己多久才能适应一个人的生活了。
-晚上在学校的操场中悠闲的与很多同校的人同行，一起感受着夜深的宁静。操场中有许多人躺在操场的草坪与小伙伴分享着一些开心与不开心的事情，偶尔也">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/925416-47ccbd6695d6bbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+来源首先先说明这个代码出自于SmartisanTime，这里面有许多开源的代码，以后我学会了一个同时在我时间充裕的情况下，我都会在这里分析源码，将我的心得与如何实现同时我遇到的一些问题进行与大家进行交流分析。
+适合人群Android的初学者，熟悉基本的自定义View。
+会遇到的一些问题1.Paint为什么添加阴影失败？答：需要关闭硬件加速，函数上面添加 @SuppressLin">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/925416-05839a7036682df3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -138,10 +128,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/10/2016-10-10/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/14/仿锤子时钟Android源码解析及实现/"/>
 
 
-  <title> 2016.10.10 | 清风阁 </title>
+  <title> 仿锤子时钟Android源码解析及实现 | 清风阁 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -281,7 +271,7 @@
             
             
               
-                2016.10.10
+                仿锤子时钟Android源码解析及实现
               
             
           </h1>
@@ -293,8 +283,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-10T17:22:33+08:00" content="2016-10-10">
-              2016-10-10
+            <time itemprop="dateCreated" datetime="2016-10-14T19:23:36+08:00" content="2016-10-14">
+              2016-10-14
             </time>
           </span>
 
@@ -307,8 +297,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/每日随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">每日随笔</span>
+                  <a href="/categories/技术笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">技术笔记</span>
                   </a>
                 </span>
 
@@ -340,17 +330,15 @@
       
 
       
-        <h4 id="晴转多云-空气质量良"><a href="#晴转多云-空气质量良" class="headerlink" title="晴转多云/空气质量良"></a>晴转多云/空气质量良</h4><hr>
-<blockquote>
-<p>越是美丽，越是短暂。</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-47ccbd6695d6bbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="夜晚"></p>
-<p>学校总是笼罩在雾蒙蒙的空气，像一个笼子一样笼罩着眼前的世界。当然也可能是自己不喜欢这种生活吧，总觉得这个世界有很多东西都在阻扰着人生的成长吧。</p>
-<p>晚上闷在寝室感觉很是无聊，也不知道自己多久才能适应一个人的生活了。</p>
-<p>晚上在学校的操场中悠闲的与很多同校的人同行，一起感受着夜深的宁静。操场中有许多人躺在操场的草坪与小伙伴分享着一些开心与不开心的事情，偶尔也能听见他们传来的一些欢声笑语，内心也会和他们一同分享开心。<br><img src="http://upload-images.jianshu.io/upload_images/925416-cae17be9e92ef841.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="萌萌哒的小猫咪"></p>
-<p>记得在上个学期的自己还有一只小猫咪——小九，也不知道小九去哪里儿了，应该忘记我了吧，对了，如果学校有小野猫就好了，好想每天晚上去给小野猫们喂点猫粮给它们，喜欢猫的人是什么样的人呢？</p>
-<p>等下再去把Android的那个项目看看吧，看看之后，十一点半爬床吧。</p>
-<p>最近说好了自己要做到慎言，慢慢来吧，毕竟这个也不是一天两天可以做的到的，加油！</p>
+        <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><p><img src="http://upload-images.jianshu.io/upload_images/925416-05839a7036682df3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="锤子时钟"></p>
+<hr>
+<h4 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h4><p>首先先说明这个代码出自于<a href="http://www.jcodecraeer.com/a/opensource/2016/0918/6619.html" target="_blank" rel="external">SmartisanTime</a>，这里面有许多开源的代码，以后我学会了一个同时在我时间充裕的情况下，我都会在这里分析源码，将我的心得与如何实现同时我遇到的一些问题进行与大家进行交流分析。</p>
+<h4 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h4><p>Android的初学者，熟悉基本的自定义View。</p>
+<h4 id="会遇到的一些问题"><a href="#会遇到的一些问题" class="headerlink" title="会遇到的一些问题"></a>会遇到的一些问题</h4><h6 id="1-Paint为什么添加阴影失败？"><a href="#1-Paint为什么添加阴影失败？" class="headerlink" title="1.Paint为什么添加阴影失败？"></a>1.Paint为什么添加阴影失败？</h6><p>答：需要关闭硬件加速，函数上面添加 <strong>@SuppressLint(“NewApi”)</strong> ，同时在函数内部添加 <strong>setLayerType(LAYER_TYPE_SOFTWARE, null);</strong> ，最小<strong>API8</strong>。</p>
+<h6 id="2-为什么需要重载onMeasure方法？"><a href="#2-为什么需要重载onMeasure方法？" class="headerlink" title="2.为什么需要重载onMeasure方法？"></a>2.为什么需要重载onMeasure方法？</h6><p>答：这个之前我也不知道为什么，因为我也是菜鸟，知道的大牛就可以跳过了，不知道的我们就一起学习下，我在 <a href="http://ticktick.blog.51cto.com/823160/1540134" target="_blank" rel="external">Android开发实践：为什么要继承onMeasure</a>得到了答案，具体就是说，如果没有使用这个方法，那么在XML中的wrap_content就与match_parent没有区别。同时在后面需要调用<strong>setMeasuredDimension(size, size)</strong>将Widch与Height保存起来。</p>
+<h6 id="3-在使用-calendar-setTime-new-Date-方法后时间为什么与我国时间不匹配？"><a href="#3-在使用-calendar-setTime-new-Date-方法后时间为什么与我国时间不匹配？" class="headerlink" title="3.在使用 calendar.setTime(new Date()) 方法后时间为什么与我国时间不匹配？"></a>3.在使用 calendar.setTime(new Date()) 方法后时间为什么与我国时间不匹配？</h6><p>答：因为我们通过这个方法得到是<strong>“标准时间”</strong>，而这个标准的时间为美国的时间，所以在运用这个方法之后，将小时加上八个小时就是我们的北京时间。</p>
+<h4 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h4><p><a href="https://github.com/qq282629379/SmartisanTime" target="_blank" rel="external">https://github.com/qq282629379/SmartisanTime</a></p>
+<h4 id="作者有话说"><a href="#作者有话说" class="headerlink" title="作者有话说"></a>作者有话说</h4><p>我也是刚刚入Android的大门，以后可以与各位互相学习，共同进步，这次解析的代码是一个比较容易的代码，我会慢慢循序渐进的，同时大家下载之后也可以提出自己的问题，在我能力范围内，我都会尽我所能，同时希望大家对我的代码指出问题。</p>
 
       
     </div>
@@ -371,22 +359,26 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/android/" rel="tag">#android</a>
+          
+            <a href="/tags/view/" rel="tag">#view</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/18/我被世界壁咚了/" rel="next" title="我被世界壁咚了">
-                <i class="fa fa-chevron-left"></i> 我被世界壁咚了
+              <a href="/2016/10/14/SNMP/" rel="next" title="SNMP 移动端与服务端之间的数据传输">
+                <i class="fa fa-chevron-left"></i> SNMP 移动端与服务端之间的数据传输
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/11/2016-10-11/" rel="prev" title="2016.10.11">
-                2016.10.11 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,7 +492,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#晴转多云-空气质量良"><span class="nav-number">1.</span> <span class="nav-text">晴转多云/空气质量良</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文-大大大大峰哥"><span class="nav-number">1.</span> <span class="nav-text">文/大大大大峰哥</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#来源"><span class="nav-number">1.0.1.</span> <span class="nav-text">来源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#适合人群"><span class="nav-number">1.0.2.</span> <span class="nav-text">适合人群</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#会遇到的一些问题"><span class="nav-number">1.0.3.</span> <span class="nav-text">会遇到的一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-Paint为什么添加阴影失败？"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">1.Paint为什么添加阴影失败？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-为什么需要重载onMeasure方法？"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">2.为什么需要重载onMeasure方法？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-在使用-calendar-setTime-new-Date-方法后时间为什么与我国时间不匹配？"><span class="nav-number">1.0.3.0.3.</span> <span class="nav-text">3.在使用 calendar.setTime(new Date()) 方法后时间为什么与我国时间不匹配？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#我的代码"><span class="nav-number">1.0.4.</span> <span class="nav-text">我的代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作者有话说"><span class="nav-number">1.0.5.</span> <span class="nav-text">作者有话说</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
