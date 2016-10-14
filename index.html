@@ -321,18 +321,12 @@
 
       
         
-          
-            <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><p><img src="http://upload-images.jianshu.io/upload_images/925416-05839a7036682df3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="锤子时钟"></p>
-<hr>
-<h4 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h4><p>首先先说明这个代码出自于<a href="http://www.jcodecraeer.com/a/opensource/2016/0918/6619.html" target="_blank" rel="external">SmartisanTime</a>，这里面有许多开源的代码，以后我学会了一个同时在我时间充裕的情况下，我都会在这里分析源码，将我的心得与如何实现同时我遇到的一些问题进行与大家进行交流分析。</p>
-<h4 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h4><p>Android的初学者，熟悉基本的自定义View。</p>
-<h4 id="会遇到的一些问题"><a href="#会遇到的一些问题" class="headerlink" title="会遇到的一些问题"></a>会遇到的一些问题</h4><h6 id="1-Paint为什么添加阴影失败？"><a href="#1-Paint为什么添加阴影失败？" class="headerlink" title="1.Paint为什么添加阴影失败？"></a>1.Paint为什么添加阴影失败？</h6><p>答：需要关闭硬件加速，函数上面添加 <strong>@SuppressLint(“NewApi”)</strong> ，同时在函数内部添加 <strong>setLayerType(LAYER_TYPE_SOFTWARE, null);</strong> ，最小<strong>API8</strong>。</p>
-<h6 id="2-为什么需要重载onMeasure方法？"><a href="#2-为什么需要重载onMeasure方法？" class="headerlink" title="2.为什么需要重载onMeasure方法？"></a>2.为什么需要重载onMeasure方法？</h6><p>答：这个之前我也不知道为什么，因为我也是菜鸟，知道的大牛就可以跳过了，不知道的我们就一起学习下，我在 <a href="http://ticktick.blog.51cto.com/823160/1540134" target="_blank" rel="external">Android开发实践：为什么要继承onMeasure</a>得到了答案，具体就是说，如果没有使用这个方法，那么在XML中的wrap_content就与match_parent没有区别。同时在后面需要调用<strong>setMeasuredDimension(size, size)</strong>将Widch与Height保存起来。</p>
-<h6 id="3-在使用-calendar-setTime-new-Date-方法后时间为什么与我国时间不匹配？"><a href="#3-在使用-calendar-setTime-new-Date-方法后时间为什么与我国时间不匹配？" class="headerlink" title="3.在使用 calendar.setTime(new Date()) 方法后时间为什么与我国时间不匹配？"></a>3.在使用 calendar.setTime(new Date()) 方法后时间为什么与我国时间不匹配？</h6><p>答：因为我们通过这个方法得到是<strong>“标准时间”</strong>，而这个标准的时间为美国的时间，所以在运用这个方法之后，将小时加上八个小时就是我们的北京时间。</p>
-<h4 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h4><p><a href="https://github.com/qq282629379/SmartisanTime" target="_blank" rel="external">https://github.com/qq282629379/SmartisanTime</a></p>
-<h4 id="作者有话说"><a href="#作者有话说" class="headerlink" title="作者有话说"></a>作者有话说</h4><p>我也是刚刚入Android的大门，以后可以与各位互相学习，共同进步，这次解析的代码是一个比较容易的代码，我会慢慢循序渐进的，同时大家下载之后也可以提出自己的问题，在我能力范围内，我都会尽我所能，同时希望大家对我的代码指出问题。</p>
-
-          
+          <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><p><img src="http://upload-images.jianshu.io/upload_images/925416-05839a7036682df3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="锤子时钟"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/14/仿锤子时钟Android源码解析及实现/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -442,45 +436,13 @@
 
       
         
-          
-            <h2 id="文／大大大大峰哥"><a href="#文／大大大大峰哥" class="headerlink" title="文／大大大大峰哥"></a>文／大大大大峰哥</h2><h6 id="写作目的"><a href="#写作目的" class="headerlink" title="写作目的"></a>写作目的</h6><p>现阶段的工作需要完成Zabbix管理Android，那么是通过SNMP进行数据传输，当前博主也是在探索，大家可以一起探讨交流。</p>
+          <h2 id="文／大大大大峰哥"><a href="#文／大大大大峰哥" class="headerlink" title="文／大大大大峰哥"></a>文／大大大大峰哥</h2><h6 id="写作目的"><a href="#写作目的" class="headerlink" title="写作目的"></a>写作目的</h6><p>现阶段的工作需要完成Zabbix管理Android，那么是通过SNMP进行数据传输，当前博主也是在探索，大家可以一起探讨交流。</p>
 <h6 id="工作环境"><a href="#工作环境" class="headerlink" title="工作环境"></a>工作环境</h6><p>Windows10、Android5.1.1系统、Ubuntu12</p>
-<hr>
-<h2 id="1、移动端与服务端互相通信"><a href="#1、移动端与服务端互相通信" class="headerlink" title="1、移动端与服务端互相通信**"></a>1、移动端与服务端互相通信**</h2><p>###1.1 目的<br>证明移动端可以与服务端进行通信，所以先去各大手机应用商城去看看别人是否有写出直接可以通信的APP。</p>
-<h3 id="1-2-前提"><a href="#1-2-前提" class="headerlink" title="1.2 前提"></a>1.2 前提</h3><p>需要配置Windwos下的SNMP的简易服务器。<strong><em>**</em></strong>（暂时不知道这个步骤是否一定要）<strong><em>**</em></strong></p>
-<h4 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h4><p><img src="http://upload-images.jianshu.io/upload_images/925416-ca633f471de586d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="开始进入控制面板"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-f35733896895fa74.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="进入程序">  <img src="http://upload-images.jianshu.io/upload_images/925416-8f98c93774f034aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="启动或关闭Windows功能">   <img src="http://upload-images.jianshu.io/upload_images/925416-1b88e5a4b88cc9f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="将这WMI SNMP打上勾">   <img src="http://upload-images.jianshu.io/upload_images/925416-dcfef79f2d9f7c53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我的电脑右键 **管理** ">  <img src="http://upload-images.jianshu.io/upload_images/925416-2326a059100dbd17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="右键**属性**">  <img src="http://upload-images.jianshu.io/upload_images/925416-ba782dd40c5ffd85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="点击添加">  <img src="http://upload-images.jianshu.io/upload_images/925416-737408860c71fc48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="按照我这个样式点击添加"></p>
-<h3 id="1-3过程"><a href="#1-3过程" class="headerlink" title="1.3过程"></a>1.3过程</h3><p>通过这个工具（<strong><strong>Snmptester.zip</strong></strong>）在Windows10上可以发送指定的OID给手机SNMP管理工具（<strong><strong>SNMP Agent</strong></strong>），手机成功的接受到数据，并将需要传输的OID返还给Windows。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><img src="http://upload-images.jianshu.io/upload_images/925416-e4d98e1409328ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snmptester操作界面"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-b0f984be168d23ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Android发送数据后收到数据的反馈"></p>
-<p>这里移动端暂时通过豌豆荚下载的一个小工具 <strong><strong>SNMP Agent</strong></strong> ，主要是通过实现一个连接来证明手机与Windows之间是可以实现SNMP通信的。</p>
-<p>这样我们就证明了 移动端是可以与电脑进行一个SNMP的数据连接。</p>
-<hr>
-<h2 id="2、运用SNMP4J进行连接服务器"><a href="#2、运用SNMP4J进行连接服务器" class="headerlink" title="2、运用SNMP4J进行连接服务器"></a>2、运用SNMP4J进行连接服务器</h2><p>目前我是通过Android去与服务端通信，当然我是借助其他的包来帮助我与服务器通信，我在网上找了很多资料，发现有一遍<a href="http://www.cnblogs.com/xdp-gacl/p/4187089.html" target="_blank" rel="external">博文</a>成功通过SUMP4J来实现了。</p>
-<h3 id="2-1-下载SNMP4包"><a href="#2-1-下载SNMP4包" class="headerlink" title="2.1 下载SNMP4包"></a>2.1 下载SNMP4包</h3><p><a href="http://www.snmp4j.org/html/download.html" target="_blank" rel="external">SNMP4下载界面</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-ff3e10175587aa4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我是通过迅雷下载的，Chrome下载没有反应"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-64f42c3a0279ce6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解压后这两个就是jar包了"></p>
-<h3 id="2-2-JAVA实现SNMP"><a href="#2-2-JAVA实现SNMP" class="headerlink" title="2.2 JAVA实现SNMP"></a>2.2 JAVA实现SNMP</h3><h6 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境"></a>编译环境</h6><p>eclipse jdk8 snmp4j-2.5.0.jar snmp4j-2.5.0-javadoc.jar</p>
-<p>在这里主要是以<a href="http://www.cnblogs.com/xdp-gacl/p/4187089.html" target="_blank" rel="external">孤傲苍狼博文</a>代码为主，博主还没有具体去分析代码的意义。我这里只是在运用，而没有去想是如何实现的，我上传一份按照他思想的<a href="http://pan.baidu.com/s/1hrVcsVM" target="_blank" rel="external"><strong>源码</strong></a>。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-4a0e6adfcab1bd69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="比较关键的就是OID与Agent地址，Angent地址需要自己修改！！！"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-8f91e93d4fb1a2e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我改成了v1版本是因为**Snmptester**软件只支持v1，**Snmptester**高于v1就会报错，暂时不知道是什么原因"></p>
-<p>以上操作，博主均已通过测试。</p>
-<h3 id="2-3-JAVA实现自定义的OID传输"><a href="#2-3-JAVA实现自定义的OID传输" class="headerlink" title="2.3 JAVA实现自定义的OID传输"></a>2.3 JAVA实现自定义的OID传输</h3><h6 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h6><p><a href="http://blog.csdn.net/dyllove98/article/details/7720060" target="_blank" rel="external">萌萌的It人 www.itmmd.com</a></p>
-<p>在这篇博文中，详细的讲解了传递String类型的数据与传递字节数组。<br>主要内容：VariableBinding方法中运用到了Variable类型，而Variable类型中不一定要采用OctetString，里面有一个用Integer32的实现方式。</p>
-<h6 id="对照组A"><a href="#对照组A" class="headerlink" title="对照组A"></a>对照组A</h6><p><img src="http://upload-images.jianshu.io/upload_images/925416-eb248fc1da823fa2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="通过Java代码发送了一个320"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-1bab0660ba882a5e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Android控制台上记录的值
-"></p>
-<h6 id="对照组B"><a href="#对照组B" class="headerlink" title="对照组B"></a>对照组B</h6><p><img src="http://upload-images.jianshu.io/upload_images/925416-b55b1fc74292dc2a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="通过Java代码发送了一个319"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-a2a607cb8aac629e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Android控制台上记录的值"></p>
-<p>对照组中的A与B，A中android控制台上记录的值为140，B则为13f，然后十六进制的140转换为十进制为320，13f则为319</p>
-<p><strong>所以在参考资料中的博文是可行有效的。</strong></p>
-<h2 id="3、移动端SNMP数据传输"><a href="#3、移动端SNMP数据传输" class="headerlink" title="3、移动端SNMP数据传输"></a>3、移动端SNMP数据传输</h2><h6 id="参考资料-1"><a href="#参考资料-1" class="headerlink" title="参考资料"></a>参考资料</h6><p><a href="http://blog.chinaunix.net/uid-29068508-id-3821872.html" target="_blank" rel="external">linux snmptrap的发送与接收</a> 、<a href="https://github.com/qq282629379/Android-SNMP" target="_blank" rel="external">Android-SNMP</a></p>
-<h3 id="3-1-实现snmptrap接受发送"><a href="#3-1-实现snmptrap接受发送" class="headerlink" title="3.1 实现snmptrap接受发送"></a>3.1 实现snmptrap接受发送</h3><p>首先需要在Linux上实现一个trap的命令接受与发送，这样才可以知道snmptrap是否可行。这里面因为我是在mac上面做的验证，traphandle这个命令并没有，但是依旧可以传递数据，只是oid没有创建，详细还是看我参考资料。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">配置代码：</div><div class="line">Conf代码 ：authcommunity execute,log,net public </div><div class="line">traphandle .1.3.6.1.4.1.2021.251.1 /root/traptest/test.pl </div><div class="line">其中authcommunity是为了设置所有用户的访问权限：可执行，记录，传递。</div><div class="line">设置traphandle(即收到.1.3.6.1.4.1.2021.251.1类OID信息时，执行test.pl)。</div><div class="line">test.pl的内容：</div><div class="line">#!/usr/bin/perl  </div><div class="line">use strict;  </div><div class="line">my $file=&quot;file.trap&quot;;  </div><div class="line">open(HANDOUT,&quot;&gt;&gt;./$file&quot;);  </div><div class="line">while()  </div><div class="line">&#123;      </div><div class="line">print HANDOUT &quot;$_&quot;;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-0a57629007fefa27.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="发送trap"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-a151582af8e0dbe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="接收端"></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/14/SNMP/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -590,18 +552,15 @@
 
       
         
-          
-            <h4 id="小雨转阴-空气质量良"><a href="#小雨转阴-空气质量良" class="headerlink" title="小雨转阴/空气质量良"></a>小雨转阴/空气质量良</h4><hr>
+          <h4 id="小雨转阴-空气质量良"><a href="#小雨转阴-空气质量良" class="headerlink" title="小雨转阴/空气质量良"></a>小雨转阴/空气质量良</h4><hr>
 <p><img src="http://upload-images.jianshu.io/upload_images/925416-fdff24d340cf8e2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="岁月蹉跎"></p>
 <p>岁月蹉跎，曾经的日子有点像流沙一样静悄悄的从手掌中的间隙中流走了，岁月有情，人无情，闭上眼睛的你如今又在何方，曾经的执子之手，又要去往何方。</p>
 <p>从何地何时开始，我们走向了不同的路。</p>
-<p>时间会变老的，会老的让我忘记这段经历，唯独用文字记录下来，但是再长的文字也经不去衰老，衰老到我都不曾见过它，还是得说一声谢谢。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-cf720f57dd0a10c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="青春无悔"></p>
-<p>感谢曾经拥有，感谢曾经爱过。</p>
-<p>“曾经爱过”，致逝去的“你”与即将逝去的“我”。</p>
-<p>愿在以后的人生道路中有人安慰爱哭的你。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/14/2016-10-14/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -711,16 +670,13 @@
 
       
         
-          
-            <h4 id="小雨转阴-空气质量良"><a href="#小雨转阴-空气质量良" class="headerlink" title="小雨转阴/空气质量良"></a>小雨转阴/空气质量良</h4><hr>
+          <h4 id="小雨转阴-空气质量良"><a href="#小雨转阴-空气质量良" class="headerlink" title="小雨转阴/空气质量良"></a>小雨转阴/空气质量良</h4><hr>
 <p><img src="http://upload-images.jianshu.io/upload_images/925416-e3c8b1ff2f823744.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="日常美图"></p>
-<p>坚持一天容易，坚持两天容易，十年二十年总是不容易，昨天晚上因为太晚了于是就没有写每日随笔，以后早点来写随笔。</p>
-<p>昨晚读完了《解忧杂货店》，可能是用Kindle看的缘故，阅读的体会没有纸质的高，但是也不想再读一遍了，小说类的书籍看一遍就好了，有空写个读后感，将这个放入待办事务中。</p>
-<p>今晚听了一下广州大学——统计学的研究生招生计划，我觉得这个还是有点意思的，与金融挂钩的自己感觉还符合自己的兴趣爱好，是李正辉教授与我们来招生的，主要介绍了一些招生方向的要求与以后的研究生的方向，同时也和我们说了一些他教的学生现在的一些状况，基本上都是与银行、交易所工作，一般都是风控方向的。同时和我们讲了一下往年的题目，感觉也不是很难。</p>
-<p>现在也是九点了，等下在温习一下Java的知识，就结束了今天的生活了。</p>
-<p>目前自己在与人交谈的时候还是比较容易犯一些毛病：<strong>“我懂了”</strong>，<strong>“我知道”</strong>，<strong>“不对”</strong>等等这些听上去很不舒服的话，慢慢的改正。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/13/2016-10-13/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -830,28 +786,12 @@
 
       
         
-          
-            <h4 id="阴-空气质量良"><a href="#阴-空气质量良" class="headerlink" title="阴/空气质量良"></a>阴/空气质量良</h4><hr>
-<p>今天有点想思考一下未来的职业规划，作为一名程序员要应对这个时代的改变，那么现在<strong>已知的职业风口是大数据、前端工程师</strong>，还有就是一些别的比如<strong>web工程师（Java），PHP后台工程师</strong>。</p>
-<h3 id="web工程师（JAVA）"><a href="#web工程师（JAVA）" class="headerlink" title="web工程师（JAVA）"></a>web工程师（JAVA）</h3><p>这个可以说是老牌程序员职业了，BAT三巨头基本上大量的代码还是用Java堆砌出来的，在现在的环境中，Java基本上算的上小铁饭碗，学好Java在程序界基本上还是很好的。而且Java从事的工作方向也很多，可以Web端，Android。</p>
-<h3 id="PHP工程师"><a href="#PHP工程师" class="headerlink" title="PHP工程师"></a>PHP工程师</h3><p>刚刚通过拉勾网搜索了一下，PHP工程师的应届生毕业生的需求很多，相比其他的这些多了很多，那么PHP工程师现在也算的上需求量很大的职业，PHP了解的并不是很多，道听途说的比较多，一般都是说这个PHP是开发效率很高的语言。</p>
-<h3 id="前端工程师"><a href="#前端工程师" class="headerlink" title="前端工程师"></a>前端工程师</h3><p>与移动端的前端联系比较密切的就是微信现在推出的<strong>微信小程序</strong>了，最近练习的一些代码中看出了，微信小程序不是很难，容易上手，而且运用到的知识就是一些Js与一些样式的，懂得这些知识点就可以顺利的开发移动端的一些应用了，当然是依附在微信的这个平台，如果微信发展健康的话，微信小程序还是可以走的很长远的。</p>
-<p>那么前端工程师最近为什么这么火，我觉得也就是因为最近看到很多人说HTML5崛起了，主要也是HTML5的跨平台性，这里的跨平台应该也就是可以直接开发移动端与web端。所以现在对前端的需求不断上涨，各种培训机构也顺着需求不断向市场输送着前端的人才。</p>
-<p>那么在这里我得出了一下几点结论：<br>1.前端人才在短时间缺口会增大。<br>2.前端的应用会越来越多，那么程序员应该掌握一些基本的前端知识。<br>3.前端相对的会比较容易，不太具备核心竞争力。<br>4.随着微信小程序的发展，开发移动端的成本会变得越来越小，移动端的前端人员会更加失去核心竞争力，同时掌握微信小程序开发技巧的需求会增大。</p>
-<h3 id="大数据工程师"><a href="#大数据工程师" class="headerlink" title="大数据工程师"></a>大数据工程师</h3><p>现在来思考一下大数据工程师，大数据工程师目前我都不知道是做什么的，隐隐听到有老师与同学提了提，大致描述就是通过大量的用户数据，来获取用户的一些基本需求，从而将用户的需求来转换成软妹币。</p>
-<p>最近自己也稍微的通过看极客学院的视频大致的了解了一点点大数据，但是还是不知道从何下手，同时通过知乎也对大数据有些许的了解，了解大数据的上手不容易。</p>
-<p>那么对当前获取的信息，得出如下看法：<br>1.大数据随着互联网的发展是必定会出现的大风口。<br>2.目前上手大数据是一件比较艰苦的事情。<br>3.大数据是需要通过大量的数据进行实践的。<br>4.大数据需要了解很多算法知识。<br>5.大数据具备核心竞争力。</p>
-<hr>
-<p>当前自己的优势：</p>
-<ul>
-<li>算法与逻辑</li>
-<li>了解 Java，C，C++，Web</li>
-<li>Android入门</li>
-<li>还有大学一年的时间</li>
-</ul>
-<p>暂时方向还是没有确定好，现在先学习好Java，然后熟悉前端的知识点，然后学习Web，暂时这样决定。</p>
-
-          
+          <h4 id="阴-空气质量良"><a href="#阴-空气质量良" class="headerlink" title="阴/空气质量良"></a>阴/空气质量良</h4>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/11/2016-10-11/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -961,20 +901,15 @@
 
       
         
-          
-            <h4 id="晴转多云-空气质量良"><a href="#晴转多云-空气质量良" class="headerlink" title="晴转多云/空气质量良"></a>晴转多云/空气质量良</h4><hr>
+          <h4 id="晴转多云-空气质量良"><a href="#晴转多云-空气质量良" class="headerlink" title="晴转多云/空气质量良"></a>晴转多云/空气质量良</h4><hr>
 <blockquote>
 <p>越是美丽，越是短暂。</p>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-47ccbd6695d6bbc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="夜晚"></p>
-<p>学校总是笼罩在雾蒙蒙的空气，像一个笼子一样笼罩着眼前的世界。当然也可能是自己不喜欢这种生活吧，总觉得这个世界有很多东西都在阻扰着人生的成长吧。</p>
-<p>晚上闷在寝室感觉很是无聊，也不知道自己多久才能适应一个人的生活了。</p>
-<p>晚上在学校的操场中悠闲的与很多同校的人同行，一起感受着夜深的宁静。操场中有许多人躺在操场的草坪与小伙伴分享着一些开心与不开心的事情，偶尔也能听见他们传来的一些欢声笑语，内心也会和他们一同分享开心。<br><img src="http://upload-images.jianshu.io/upload_images/925416-cae17be9e92ef841.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="萌萌哒的小猫咪"></p>
-<p>记得在上个学期的自己还有一只小猫咪——小九，也不知道小九去哪里儿了，应该忘记我了吧，对了，如果学校有小野猫就好了，好想每天晚上去给小野猫们喂点猫粮给它们，喜欢猫的人是什么样的人呢？</p>
-<p>等下再去把Android的那个项目看看吧，看看之后，十一点半爬床吧。</p>
-<p>最近说好了自己要做到慎言，慢慢来吧，毕竟这个也不是一天两天可以做的到的，加油！</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/10/2016-10-10/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1084,37 +1019,15 @@
 
       
         
-          
-            <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><blockquote>
+          <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><blockquote>
 <p>只有一次人生，只有一次大学，只有一次会与你相遇，不会有第二次相逢，不会往回走，但是我们壁咚了一下。</p>
 </blockquote>
 <p><img src="http://upload-images.jianshu.io/upload_images/925416-ba039ba118f07f77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="世界么么哒"></p>
-<p>三天假期踏上了属于我们的旅途，为我们曾经来过添上了不一样的痕迹，嗯哼，我们与世界么么哒。</p>
-<p>出发的有点仓促，源于中秋佳节前一天室友对桂林的描述，于是在当天晚上11点急急忙忙的各种去刷网上别人的出行计划，当然在我大脑CPU全部负载的情况下还是在12点赶出了出行的计划，于是秉承着说走就走的信念当晚和基友们就买好了三张出行的火车票，“很棒的”是由于买票的时间太仓促，所以我们买的是站票四个小时，但是什么都阻止不了我们的旅行。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-1a550532a9a9faee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="江湖"></p>
-<p>中秋节当天我们六点半起床了，赶上了出行的火车，在火车上遇见了一个高铁的学弟，不知不觉我们在车上聊了二个小时，生活就是这样，我们会遇见了形形色色的人，虽然我们彼此互不了解，但是我们坐在一起各种也可以谈天说地，述说着自己对生活的展望，对未来的憧憬。在他即将下车的时候我们都还在侃侃而谈，下车的时候虽然彼此投机，但也并没有追问彼此的联系电话，车上我们是朋友，我们可以把酒言欢，可以互相聊青春那些屁事，下车了我们再一次恢复到之前的角色，这就叫做江湖，你我相谈甚欢，又何必在乎与你下次相遇，下次遇见再次投机便是缘分，若是不投机呢？</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-0967d1d1414bc042.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="双层巴士"></p>
-<p>转眼四个小时过去，我们来到了桂林，坐上了双层巴士感觉好棒，沿途看见了许许多多的老建筑，有一种老城的韵味，感觉整个桂林都被群山包裹住了。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-cfc2c204085789dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="小碎花姑娘"></p>
-<p>中午的时候我们买到了去阳朔的车票，大家并不是按照车票所规定的座位来坐，都是随意座。我扫视了车厢发现最后一排有座位，于是我走到了最后面，最后一排的左边是一对情侣，最右边是一个女生，白褶皱衣服，小碎花的裙子，于是我轻声问了问她旁边的位置有没有人坐，她回答了一声没有，于是我来到她的旁边坐下下来。车启动了，我闲着无聊于是看起了书，偶尔也看看车窗外面的风景，沿途的风景都是一个山村田野之间，很是怡人，让人可以忘记城市的喧嚣，一路上只要有好看的景色，旁边的女生都会用随身携带的小挎包中拿出了的相机将美景保存起来，拍着拍着，在我看书的时候，忽然转过头，用手中的相机将我拍了下来，当时我觉得她是一个很有意思的女生，一个人出行，一个人拍点有意思的图片，顺带拍点有意思的人，车继续的开着，女生看见美丽的景色继续用手中的相机记录下来，我也继续看着我的书，随着车子的颠簸，我们都感觉开始发困。女生将一只腿搭在另腿上，蜷了蜷身子，慢慢的睡着了，慢慢的她的头靠向了我的肩膀。当我感受到她靠在了我的肩膀上，微微的有一种很甜的感觉，想一杯醇香奶茶，很香很清新。她靠在我的肩膀上，我听不见车子发动机的轰鸣声，感受不到旅途的颠簸，我的头微微向左转，看见的是她乌黑飘逸的长发，闻见的是她身上散发上来的淡淡香味，我微微低下头看了看她，挺挺的鼻梁，月牙般的眼睛，很干净的味道，又夹杂了一点文艺气，很舒服的感觉。直到即将下车的时候我们都没有开口说一句话，仿佛一开口就破坏了其中的感觉了，下车的时候，我们即将分开，在人来人往的车站我们只是多看了彼此几眼，穿着白褶皱衣服，小碎花的裙子的女生，在车上你是我的小碎花姑娘，下车了你依旧是你，我依旧是我。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-999c8711274d0f3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="青旅"></p>
-<p>到达阳朔的时间是下午四点，我们到达了预定的旅馆，这是一家青旅，进去有一个女生盘着腿坐在沙发上看着手上的手机，她一副很开心的样子，很感染我们出游的心情，很是愉快。旅馆的老板是一个比我们大不了多少的大叔叔，有点微胖，长得挺帅的，人挺好的，告诉我们如果有什么问题可以质询他。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-184008903d425d33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="西街"></p>
-<p>晚上的我们首先是前往了西街，进入到西街里面简直是人山人海，好生热闹，有很多很好吃的东西，烤榴莲，还有一大杯的芒果奶茶，自制酸奶，最有意思的地方还是西街那一排的清吧，里面有人弹唱着民谣，流行乐，也有放着轻音乐，虽然西街很喧闹，但是在这里却体验到了一点点宁静的味道，一群人被台上不知名的歌手唱的歌拉到一起，一同享受着音乐带给我们的惬意。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-b7b74c4ed9dcb85b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="杨堤竹筏"></p>
-<p>第二天我们前往计划中的杨堤乘坐竹筏，到杨堤的时候正好是中午12点，因为竹筏上路是需要四个人，所以我们三人小组三缺一，然后我们在买票的地方遇见了一个大叔，大叔个子不高，人很爽朗，感觉和小沈阳的声音好像，大叔是一个人出游，所以在乘坐竹筏的时候顺理成章的组成了四人小组，沿途的风景不错，好山好水，感受到了桂林的大好河山，开竹筏的是一个很有意思的人，我们上了竹筏直接了当的和我们提出了额外服务需要需要额外费用，比如漫游，讲解等等。我们并没有接受他的提议，虽然在我们拒绝后一开始他还是将速度开得挺快的，但是后面也还是慢了下来，还体验了一次很爽的经历，就是大船经过时掀起的浪，因为我是做后排的，所以即体验到了冲浪带到来的冲击感，同时衣服裤子也没有打湿。当然前排的基友和大叔就没有这么好运了，当然总的来说还是挺不错。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-39e6fec0e0496b6d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="兴坪古镇"></p>
-<p>竹筏的终点是兴坪古镇，当时正是饭点，于是我们和大叔一起在一个农家乐里吃饭，吃饭的时候大叔与我们扯南聊北，我们大家彼此也逐渐的不在像之前那样拘谨，在买单的时候，大叔主动买单，吃完我们前往小镇的步行街，我们在买明信片的地方停留了一段时间，大叔也往前走，我们都没有注意到，于是我们就走散了，在竹筏上我们还和大叔合了影。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-f0e94e604f1dbc73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="十里画廊"></p>
-<p>第三天我们是准备电瓶车游十里画廊，因为我不会骑电瓶车，所以三个人租了两辆电瓶车，我们第一站是鉴山寺，在这里我们就是看了一下百年龟，出来的时候，我说我要试着骑一下电瓶车，真的很简单，简单的告诉了我基本的操作，我就成功的学会了，在这个假期中我第一次骑小电摩，真的很开心，真的很爽，疾驰在马路上的时候，感觉微风拂面在，感受着速度影响着我的肾上腺素。虽然速度最快也不过五十码，但是这是我第一次骑小电瓶真的很开心，谢谢我的小伙伴陪我玩耍，而且在我学会了都让着我骑，太照顾我了。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-8efae2393e90f6cc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="月亮山"></p>
-<p>下午我们是去月亮山，因为是走小路的原因我们每个人七块钱，门票是20块，所以还是便宜了很多的，很开心，一路上遇见了很多国际友人，与很多国际友人都打了招呼，有一个应该比我小的还鼓励我继续往上爬，很有爱，他们都充满了激情，在月亮山的“月宫”还与一对国外的夫妻一起合影了好开心。</p>
-<p>晚上我们乘坐上回程的列车，在回程的过程中，回顾这次出行，遇到了小碎花裙姑娘，认识了爽朗的大叔，学会开小电摩。</p>
-<p>生命不是由时间的长度决定，而是用故事的多少衡定。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-4e5a1e7c89cce33a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="么么哒！世界"></p>
-<p>我被世界壁咚了，么么哒！</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/18/我被世界壁咚了/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1224,18 +1137,15 @@
 
       
         
-          
-            <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><blockquote>
+          <h2 id="文-大大大大峰哥"><a href="#文-大大大大峰哥" class="headerlink" title="文/大大大大峰哥"></a>文/大大大大峰哥</h2><blockquote>
 <p>医学界为“生”做好了准备，但没有为“死”做好准备。——马尔科姆 格拉德威尔</p>
 </blockquote>
 <p><img src="http://upload-images.jianshu.io/upload_images/925416-6a4f963ac95e3e90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="最好的告别"></p>
-<p>打开这本书当我阅读至第一页时，我就觉得有必要继续读下去。看到格拉德威尔先生对这本书的评价<strong>我们为生做好了准备，却从没有为死做好准备。</strong>恍然间才发现从小到大，爸妈和老师都告诉我们如何珍爱生命，于是乎我们学会了照顾自己，热爱着生命。却并没有一本书，一个人告诉我们如何面对死亡，在我们地球上每一秒钟就有1.8个人去世，在我二十一年的岁月中也经历过亲人的离去，种种事件告诉我们，我们缺乏在死亡上的教育与引导。记得早些年前有一个APP的出现，是一个显示我们还能在这个世界上待多久，当时觉得这个软件太过于现实，但是的确没有错，教我们如何正视时间。那么为什么会导致我们出现这样的情况，主要是在我国以及很多发达国家一样，面对死亡都是一件很“残忍”的，是极为晦气的，同时了面对死亡的也一般是一些老人家，所以我们做晚辈的也不好与长辈交流死亡，这样就是不尊重，当然我们在小时候还是朝阳就更不会与死亡挂钩了，所以就这样从小到大都没有人正确的引导我们什么是死亡，我们该如何面对。这也就是我为什么要看这本书的原因，同时也是这本书为什么是畅销书之一的缘故了吧。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-6f99cf578c5b30a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="思考死亡只是为了活的更好"></p>
-<p>那么在这本书的写作上作者以一种循序渐进的过程来向我们描述衰老到死亡，告诉我们如何去面对它。用他身边的例子来诉说死亡，书中描述了作者的病人、朋友以及他的父亲，作者希望通过这本书以一个很正确很积极的态度去看待死亡化解我们对于死亡的恐惧感，同时弥补我们对死亡的空白。前面的部分主要是说死亡与独立生活之间的关系，在书中用一个百岁老人的故事告诉我们在面对死亡时，或许不能独立生活这个是比死亡更可怕的一件事情，其实我想作者想告诉我们的是不光要活着，更要有意义的活着。在我们害怕死亡的时候不妨可以反思反省一下自己有没有活着。后段主要是教我们如何面对衰老，虽然我们现在无法体会到那种感觉，但是通过这本书也多多少少的了解了一些，书中的病人在最后的日子里有开心的离开也有痛苦的离开，这里有个接受治疗的选择，这里面的观点与作者也是持有相同的意见，但是还是不能完全抹杀奇迹的出现吧。虽然描写的人群中一个一个都死去了，书中也并未出现生命的奇迹，但是生命毕竟是脆弱的，我们相信奇迹，但是更要相信科学。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/925416-6b5e24fc8333eb20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花开"></p>
-<p>生命是花开花落，生命是昙花一现，思考死亡是为了活得更好。</p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/14/《最好的告别》读后感/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
